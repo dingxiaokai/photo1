@@ -1,0 +1,18 @@
+<view>
+  <view class='login_logo'>
+    <image src='../../img/login/logo_bg.png'></image>
+  </view>
+  <view class='login_form'>
+    <view class='inpbox'>
+      <text></text>
+      <input type='number' placeholder='请输入手机号码' focus='true' name='' placeholder-style='color:#ccc;' adjust-position='true' bindinput='userNameInput'></input>
+
+    </view>
+    <view class='inpbox'>
+      <text></text>
+      <input type='number' placeholder='请输入短信验证码' maxlength='5' name='CharCode' placeholder-style='color:#ccc;' adjust-position='true'></input>
+      <text style='color:#3394FE;' bindtap='loginBtnClick'>发送验证码</text>
+    </view>
+    <view class='button'><button type="primary" bindtap='buttonBar'>注册登录</button></view>
+  </view>
+</view>

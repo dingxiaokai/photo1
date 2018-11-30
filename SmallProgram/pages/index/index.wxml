@@ -1,0 +1,51 @@
+<scroll-view>
+  <view class='banner'>
+    <swiper class="swiper" indicator-dots="true" autoplay="true" interval="5000" duration="1000">
+      <block wx:for="{{movies}}" wx:for-index="index" wx:key="">
+        <swiper-item>
+          <image src="{{item.url}}" class="slide-image" mode="aspectFill" />
+        </swiper-item>
+      </block>
+      
+    </swiper>
+  </view>
+  <view class='navbar'>
+    <view>
+      <navigator class='nvar'>
+        <image src='../../img/index/file.png'></image>
+        <text>眼健康档案</text>
+      </navigator>
+    </view>
+    <view>
+      <navigator class='navr'>
+        <image src='../../img/index/near.png'></image>
+        <text>眼健康档案</text>
+      </navigator>
+    </view>
+    <view>
+      <navigator class='navr'>
+        <image src='../../img/index/reservation.png'></image>
+        <text>眼健康档案</text>
+      </navigator>
+    </view>
+    <view>
+      <navigator class='navr'>
+        <image src='../../img/index/test.png'></image>
+        <text>眼健康档案</text>
+      </navigator>
+    </view>
+  </view>
+  <view class='new'>
+    <!-- <view wx:for="{{imgs}}" wx:key="">
+      <image mode='aspectFill' src='{{item.url}}'></image>
+      <view><text>{{item.text}}</text></view>
+    </view> -->
+    <view wx:for="{{imgs}}" wx:key="" bindtap='newClick' data-id="{{item.url}}">
+      {{index}}{{item.url}}
+    </view>
+    <view wx:for="{{imgs}}" wx:key="" wx:for-item="items" wx:for-index="idx">
+      {{idx}}{{items.url}}
+    </view>
+  </view>
+  <button bindtap='bindClick'>点击</button>
+</scroll-view>

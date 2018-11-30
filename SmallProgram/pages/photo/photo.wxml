@@ -1,0 +1,3 @@
+<view class="body">
+  <view class="wrap" id="wrap"></view>
+</view>
